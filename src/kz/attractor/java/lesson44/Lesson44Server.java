@@ -24,6 +24,16 @@ public class Lesson44Server extends BasicServer {
 
         registerGet("/books/bookInfo", this::bookInfoHandler);
 
+        registerGet("/client", this::clientInfoHandler);
+
+    }
+
+    private void clientInfoHandler(HttpExchange exchange) {
+        renderTemplate(exchange, "client.ftlh", getClientInfoModel());
+    }
+
+    private Object getClientInfoModel() {
+        return new ClientDataModel();
     }
 
     private void bookInfoHandler(HttpExchange httpExchange) {

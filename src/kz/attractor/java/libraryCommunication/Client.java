@@ -14,6 +14,7 @@ public class Client {
     private String login;
     private String email;
     private String password;
+    private String img;
 
     private List<Integer> booksFor1;
     private List<Integer> booksFor2;
@@ -47,6 +48,15 @@ public class Client {
         this.login = login;
         this.email = email;
         this.password = password;
+    }
+
+    public Client(Integer id, String name, String login, String email, String password, String img) {
+        this.id = id;
+        this.name = name;
+        this.login = login;
+        this.email = email;
+        this.password = password;
+        this.img = img;
     }
 
     public static Client createClient(Integer id, Map<String, String> map) {
@@ -93,5 +103,13 @@ public class Client {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }

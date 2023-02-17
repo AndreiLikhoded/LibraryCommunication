@@ -7,57 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f773420-89a0-45eb-b583-baeec2116a30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/_gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/freemarker.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AttractorHttpServer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/bg/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/book.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/books.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/client.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/css/forms.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/css/freemarker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/images/idiot.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/sample.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/lesson44/Lesson44Server.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/lesson44/SampleDataModel$User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/lesson44/SampleDataModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/lesson44/SampleDocument.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/lesson44/TestDataModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/server/BasicServer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/server/ContentType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/server/ResponseCodes.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/server/RouteHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readers.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/BookDataModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/BookInfoModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/Lesson44Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/SampleDataModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/SampleDocument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/TestDataModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/libraryCommunication/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/libraryCommunication/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/server/BasicServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/server/ContentType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/server/ResponseCodes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/server/RouteHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/service/BooksService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/service/ReadersService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/freemarker.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/ClientDataModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/client.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/data/client.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/lesson44/Lesson44Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/lesson44/Lesson44Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/libraryCommunication/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/libraryCommunication/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/Lesson44Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/Lesson44Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kz/attractor/java/libraryCommunication/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/attractor/java/libraryCommunication/Client.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
