@@ -22,6 +22,18 @@ public class Client {
     private transient List<Book> books1;
     private transient List<Book> books2;
 
+    private Book book;
+
+
+    public void ClientGetBook(Client client, Book book2){
+        List<Book> book = BooksService.readFile();
+        for (Book books : book) {
+            if(book2.getBookId().equals(client.getId())){
+                this.book = books;
+            }
+        }
+    }
+
     public void setBooks(){
         List<Book> books = BooksService.readFile();
         books1 = booksFor1.stream()
@@ -41,14 +53,6 @@ public class Client {
     public void setLogin(String login) {
         this.login = login;
     }
-
-//    public Client(Integer id, String name, String login, String email, String password) {
-//        this.id = id;
-//        this.name = name;
-//        this.login = login;
-//        this.email = email;
-//        this.password = password;
-//    }
 
     public Client(Integer id, String name, String login, String email, String password, String img) {
         this.id = id;
