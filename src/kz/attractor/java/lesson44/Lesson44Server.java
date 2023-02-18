@@ -26,6 +26,16 @@ public class Lesson44Server extends BasicServer {
 
         registerGet("/client", this::clientInfoHandler);
 
+        registerGet("/client/clientHistory", this::clientHistoryHandler);
+
+    }
+
+    private void clientHistoryHandler(HttpExchange httpExchange) {
+        renderTemplate(httpExchange, "clientHistory.ftlh", getClientHistory());
+    }
+
+    private Object getClientHistory() {
+        return new ClientHistoryModel();
     }
 
     private void clientInfoHandler(HttpExchange exchange) {

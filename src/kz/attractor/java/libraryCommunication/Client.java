@@ -42,13 +42,13 @@ public class Client {
         this.login = login;
     }
 
-    public Client(Integer id, String name, String login, String email, String password) {
-        this.id = id;
-        this.name = name;
-        this.login = login;
-        this.email = email;
-        this.password = password;
-    }
+//    public Client(Integer id, String name, String login, String email, String password) {
+//        this.id = id;
+//        this.name = name;
+//        this.login = login;
+//        this.email = email;
+//        this.password = password;
+//    }
 
     public Client(Integer id, String name, String login, String email, String password, String img) {
         this.id = id;
@@ -60,7 +60,7 @@ public class Client {
     }
 
     public static Client createClient(Integer id, Map<String, String> map) {
-        return new Client(id, map.get("name"), map.get("login"), map.get("email"), map.get("password"));
+        return new Client(id, map.get("name"), map.get("login"), map.get("email"), map.get("password"), map.get("img"));
     }
 
     public static Boolean checkClientForExistence(Client  client, Client client2) {

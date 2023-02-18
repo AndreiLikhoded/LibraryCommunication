@@ -73,7 +73,7 @@
             <td>${clients.name}</td>
             <td>${clients.login}</td>
             <td>${clients.email}</td>
-            <td><a type="button" class="btn btn-info" href="/books/bookInfo">Info</button></td>
+            <td><a type="button" class="btn btn-info" href="/client/clientHistory">Info</button></td>
         </tr>
         </#list>
 

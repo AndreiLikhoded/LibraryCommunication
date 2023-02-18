@@ -13,31 +13,17 @@ import java.util.Map;
 
 public class BookDataModel {
 
-    private List<Book> book = new ArrayList<>();
+    private List<Book> book;
 
     public BookDataModel() {
-        book.addAll(List.of(
-                new Book("Idiot", "F.M.Dostoevskiy", ".data/images/idiot.jpg"),
-                new Book("Voina i mir", "L.V.Tolstoy", ".data/images/idiot.jpg")
-                ));
+        this.book = BooksService.readFile();
     }
 
     public List<Book> getBooks() {
         return book;
     }
 
-    //    private Map<String, List<Book>> bookList;
-//
-//
-//    public BookDataModel() {
-//        bookList = (Map<String, List<Book>>) BooksService.readFile();
-//    }
-//
-//    public Map<String, List<Book>> getBookList() {
-//        return bookList;
-//    }
-//
-//    public void setBookList(Map<String, List<Book>> bookList) {
-//        this.bookList = bookList;
-//    }
+    public void setBook(List<Book> book) {
+        this.book = book;
+    }
 }
