@@ -4,13 +4,15 @@
     "name": "Andrei",
     "login": "Bazzzanga",
     "email": "qwe@qwe",
-    "password": "122"
+    "password": "122",
+    "reserve1": "Idiot"
   },
   {
     "id": 2,
     "name": "Alexei",
     "login": "Caramba",
   "email": "ewq@ewq",
-    "password": "123"
+    "password": "123",
+    "reserve2": "1984"
   }
 ]

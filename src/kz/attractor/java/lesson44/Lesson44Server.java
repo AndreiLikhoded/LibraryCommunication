@@ -18,8 +18,6 @@ public class Lesson44Server extends BasicServer {
         super(host, port);
         registerGet("/sample", this::freemarkerSampleHandler);
 
-        registerGet("/test", this::testHandler);
-
         registerGet("/books", this::bookHandler);
 
         registerGet("/books/bookInfo", this::bookInfoHandler);
@@ -78,10 +76,6 @@ public class Lesson44Server extends BasicServer {
 
     private void freemarkerSampleHandler(HttpExchange exchange) {
         renderTemplate(exchange, "sample.html", getSampleDataModel());
-    }
-
-    private void testHandler(HttpExchange exchange){
-        renderTemplate(exchange, "test.html", new TestDataModel());
     }
 
     private void bookHandler(HttpExchange exchange){

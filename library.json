@@ -3,24 +3,28 @@
     "id": 1,
     "name": "Idiot",
     "author": "F.M.Dostoevskiy",
-    "busy": false
+    "busy": false,
+    "clientName1": "Andrei"
   },
   {
     "id": 2,
     "name": "Voina i mir",
     "author": "L.V.Tolstoy",
-    "busy": false
+    "busy": false,
+    "clientName1": "Andrei"
   },
   {
     "id": 3,
     "name": "Brat`ya Karamazovy",
     "author": "F.M.Dostoevskiy",
-    "busy": false
+    "busy": false,
+    "clientName2": "Alexei"
   },
   {
     "id": 4,
     "name": "1984",
     "author": "Jorj Oruel",
-    "busy": false
+    "busy": false,
+    "clientName2": "Alexei"
   }
 ]

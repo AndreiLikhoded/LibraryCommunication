@@ -15,6 +15,8 @@ public class Client {
     private String email;
     private String password;
     private String img;
+    private String reserve1;
+    private String reserve2;
 
     private List<Integer> booksFor1;
     private List<Integer> booksFor2;
@@ -25,13 +27,14 @@ public class Client {
     private Book book;
 
 
-    public void ClientGetBook(Client client, Book book2){
+    public List<Book> ClientGetBook(Client client, Book book2){
         List<Book> book = BooksService.readFile();
         for (Book books : book) {
             if(book2.getBookId().equals(client.getId())){
                 this.book = books;
             }
         }
+        return book;
     }
 
     public void setBooks(){
@@ -54,17 +57,19 @@ public class Client {
         this.login = login;
     }
 
-    public Client(Integer id, String name, String login, String email, String password, String img) {
+    public Client(Integer id, String name, String login, String email, String password, String img, String reserve1, String reserve2) {
         this.id = id;
         this.name = name;
         this.login = login;
         this.email = email;
         this.password = password;
         this.img = img;
+        this.reserve1 = reserve1;
+        this.reserve2 = reserve2;
     }
 
     public static Client createClient(Integer id, Map<String, String> map) {
-        return new Client(id, map.get("name"), map.get("login"), map.get("email"), map.get("password"), map.get("img"));
+        return new Client(id, map.get("name"), map.get("login"), map.get("email"), map.get("password"), map.get("img"), map.get("reserve1"), map.get("reserve2"));
     }
 
     public static Boolean checkClientForExistence(Client  client, Client client2) {
@@ -115,5 +120,21 @@ public class Client {
 
     public void setImg(String img) {
         this.img = img;
+    }
+
+    public String getReserve1() {
+        return reserve1;
+    }
+
+    public void setReserve1(String reserve1) {
+        this.reserve1 = reserve1;
+    }
+
+    public String getReserve2() {
+        return reserve2;
+    }
+
+    public void setReserve2(String reserve2) {
+        this.reserve2 = reserve2;
     }
 }

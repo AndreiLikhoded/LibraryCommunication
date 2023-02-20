@@ -8,7 +8,7 @@ public class ClientHistoryModel {
     public ClientHistoryModel() {
         this.client = new Client(1, "Andrei", "Bazzzanga", "qwe@qwe", "122", "https://images.unsplash.com" +
                 "/photo-1518020382113-a7e8fc38eac9?" +
-                "ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnVubnklMjBwaWN0dXJlc3xlbnwwfHwwfHw%3D&w=1000&q=80");
+                "ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnVubnklMjBwaWN0dXJlc3xlbnwwfHwwfHw%3D&w=1000&q=80", "Idiot", "1984");
     }
 
     public Client getClient() {

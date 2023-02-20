@@ -2,7 +2,6 @@ package kz.attractor.java.libraryCommunication;
 
 import kz.attractor.java.service.ReadersService;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class Book {
@@ -16,13 +15,18 @@ public class Book {
 
     private Integer bookId;
 
+    private String clientName1;
+    private String clientName2;
+
     private transient Client client;
 
 
-    public Book(String name, String author, String img) {
+    public Book(String name, String author, String img, String clientName1, String clientName2) {
         this.name = name;
         this.author = author;
         this.img = img;
+        this.clientName1 = clientName1;
+        this.clientName2 = clientName2;
 
         bookStatus();
     }
@@ -86,4 +90,19 @@ public class Book {
         this.client = client;
     }
 
+    public String getClientName1() {
+        return clientName1;
+    }
+
+    public void setClientName1(String clientName1) {
+        this.clientName1 = clientName1;
+    }
+
+    public String getClientName2() {
+        return clientName2;
+    }
+
+    public void setClientName2(String clientName2) {
+        this.clientName2 = clientName2;
+    }
 }
