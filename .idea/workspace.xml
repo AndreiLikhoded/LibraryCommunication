@@ -7,15 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f773420-89a0-45eb-b583-baeec2116a30" name="Default Changelist" comment="second commit">
-      <change afterPath="$PROJECT_DIR$/data/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/registration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson45/Lesson45Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/utils/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profile.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/ProfileDataModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/libraryCommunication/Profile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/data/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/data/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/lesson45/Lesson45Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/lesson45/Lesson45Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/server/BasicServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/server/BasicServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kz/attractor/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/attractor/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kz/attractor/java/lesson45/Lesson45Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson45/Lesson45Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kz/attractor/java/server/BasicServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/attractor/java/server/BasicServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

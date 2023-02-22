@@ -74,6 +74,16 @@ public abstract class BasicServer {
         }
     }
 
+//    protected void redirect404(HttpExchange exchange, String path){
+//        try{
+//            exchange.getResponseHeaders().add("Location", path);
+//            exchange.sendResponseHeaders(303, 0);
+//            exchange.getResponseBody().close();
+//        }catch (IOException e){
+//            e.printStackTrace();
+//        }
+//    }
+
     private static HttpServer createServer(String host, int port) throws IOException {
         var msg = "Starting server on http://%s:%s/%n";
         System.out.printf(msg, host, port);
