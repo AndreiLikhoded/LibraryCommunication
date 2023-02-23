@@ -68,7 +68,7 @@ public class Client {
 
 
 
-        return new Client(map.get("name"),map.get("email"), map.get("password"), 1, map.get("bazzanga"), map.get("img"));
+        return new Client(map.get("name"),map.get("email"), map.get("password"), id, map.get("bazzanga"), map.get("img"));
     }
 
     public static Boolean checkClientForExistence(Client  client, Client client2) {

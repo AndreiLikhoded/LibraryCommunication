@@ -3,6 +3,7 @@ package kz.attractor.java.lesson45;
 import com.sun.net.httpserver.HttpExchange;
 import kz.attractor.java.lesson44.Lesson44Server;
 import kz.attractor.java.lesson44.ProfileDataModel;
+import kz.attractor.java.lesson44.SuccessfulRegistrationDataModel;
 import kz.attractor.java.libraryCommunication.Client;
 import kz.attractor.java.server.ContentType;
 import kz.attractor.java.server.ResponseCodes;
@@ -26,6 +27,15 @@ public class Lesson45Server extends Lesson44Server {
         registerGet("/register", this::registeringGet);
         registerPost("/register", this::registeringPost);
         registerGet("/profile", this::profileHandler);
+        registerGet("/successfulRegistration", this::registrationHandler);
+    }
+
+    private void registrationHandler(HttpExchange exchange) {
+        renderTemplate(exchange, "/successfulRegistration.html", getRegistration());
+    }
+
+    private Object getRegistration() {
+        return new SuccessfulRegistrationDataModel();
     }
 
 
@@ -42,15 +52,15 @@ public class Lesson45Server extends Lesson44Server {
                 List<Client> clients = ReadersService.readFile();
                 Client client = Client.createClient(clients.size() + 1, parsed);
 
-                clients.add(client);
-                ReadersService.writeFile(clients);
-                redirect303(exchange, "/successfulRegistration");
 
                 for (Client clientCheck : clients) {
                     if (Client.checkClientForExistence(client, clientCheck)) {
                         throw new RuntimeException("user already exists!");
                     }
                 }
+                clients.add(client);
+                ReadersService.writeFile(clients);
+                redirect303(exchange, "/successfulRegistration");
             } else {
                 map.put("fail_text", "Please fill in all the fields!");
                 renderTemplate(exchange, "register.html", map);
@@ -58,7 +68,7 @@ public class Lesson45Server extends Lesson44Server {
         } catch (Exception e) {
             e.printStackTrace();
 
-            map.put("fail_text", "Something went wrong");
+            map.put("fail_text", "Incorrect input!");
             renderTemplate(exchange, "register.html", map);
         }
     }
@@ -71,21 +81,26 @@ public class Lesson45Server extends Lesson44Server {
 
 
     private void loginPost(HttpExchange exchange) {
-        String cType = getContentType(exchange);
+        Map<String, Object> map = new HashMap<>();
         String raw = getBody(exchange);
-
         Map<String, String> parsed = Utils.parseUrlEncoded(raw, "&");
-
-        String data = String.format("<p>Raw data: <b>%s</b></p>" +
-                "<p>Content-type: <b>%s</b></p>" +
-                "<p>After processing: <b>%s</b></p>", raw, cType, parsed);
-        try{
-            sendByteData(exchange, ResponseCodes.OK, ContentType.TEXT_HTML, data.getBytes());
-        }catch (IOException e){
+        try {
+            if (parsed.size() == 2) {
+                List<Client> clients = ReadersService.readFile();
+                for (Client checkClient : clients) {
+                    if (checkClient.getEmail().equals(parsed.get("email")) && checkClient.getPassword().equals(parsed.get("password"))) {
+                        throw new RuntimeException();
+                    }
+                }
+                map.put("Correct", true);
+                redirect303(exchange, "/profile");
+            }else {
+                map.put("fail-text", "Incorrect input");
+                renderTemplate(exchange, "login.html", map);
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
-//        redirect303(exchange, "/client/clientHistory");
 
     }
 

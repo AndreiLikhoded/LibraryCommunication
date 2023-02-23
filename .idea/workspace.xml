@@ -7,14 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f773420-89a0-45eb-b583-baeec2116a30" name="Default Changelist" comment="second commit">
-      <change afterPath="$PROJECT_DIR$/data/successfulRegistration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/SuccessfulRegistration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/SuccessfulRegistrationDataModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/profile.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/data/profile.ftlh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/lesson44/ClientHistoryModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/lesson44/ClientHistoryModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/successfulRegistration.html" beforeDir="false" afterPath="$PROJECT_DIR$/data/successfulRegistration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/lesson45/Lesson45Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/lesson45/Lesson45Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/libraryCommunication/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/libraryCommunication/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readers.json" beforeDir="false" afterPath="$PROJECT_DIR$/readers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/ClientHistoryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/ClientHistoryModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kz/attractor/java/lesson45/Lesson45Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson45/Lesson45Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kz/attractor/java/libraryCommunication/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/attractor/java/libraryCommunication/Client.java" afterDir="false" />
     </list>

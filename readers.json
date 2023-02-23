@@ -12,5 +12,53 @@
     "password": "123",
     "id": 2,
     "login": "Caramba"
+  },
+  {
+    "name": "Petr",
+    "email": "dsff@er",
+    "password": "321",
+    "id": 3
+  },
+  {
+    "name": "Andrei",
+    "email": "t@t",
+    "password": "123",
+    "id": 4
+  },
+  {
+    "name": "Semen",
+    "email": "w@w",
+    "password": "432",
+    "id": 5
+  },
+  {
+    "name": "Vladimir",
+    "email": "w@w",
+    "password": "123",
+    "id": 6
+  },
+  {
+    "name": "Registrator",
+    "email": "r@r",
+    "password": "123",
+    "id": 7
+  },
+  {
+    "name": "Reg",
+    "email": "g@g",
+    "password": "123",
+    "id": 8
+  },
+  {
+    "name": "Er",
+    "email": "er@er",
+    "password": "123",
+    "id": 9
+  },
+  {
+    "name": "Kunjut",
+    "email": "k@k",
+    "password": "123",
+    "id": 10
   }
 ]
