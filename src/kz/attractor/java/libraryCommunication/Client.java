@@ -8,15 +8,13 @@ import java.util.stream.Collectors;
 
 
 public class Client {
-    private Integer id;
     private String name;
-
-    private String login;
     private String email;
     private String password;
+    private Integer id;
+
+    private String login;
     private String img;
-    private String reserve1;
-    private String reserve2;
 
     private List<Integer> booksFor1;
     private List<Integer> booksFor2;
@@ -57,19 +55,20 @@ public class Client {
         this.login = login;
     }
 
-    public Client(Integer id, String name, String login, String email, String password, String img, String reserve1, String reserve2) {
-        this.id = id;
+    public Client(String name, String email, String password, Integer id, String login, String img) {
         this.name = name;
-        this.login = login;
         this.email = email;
         this.password = password;
+        this.id = id;
+        this.login = login;
         this.img = img;
-        this.reserve1 = reserve1;
-        this.reserve2 = reserve2;
     }
 
     public static Client createClient(Integer id, Map<String, String> map) {
-        return new Client(id, map.get("name"), map.get("login"), map.get("email"), map.get("password"), map.get("img"), map.get("reserve1"), map.get("reserve2"));
+
+
+
+        return new Client(map.get("name"),map.get("email"), map.get("password"), 1, map.get("bazzanga"), map.get("img"));
     }
 
     public static Boolean checkClientForExistence(Client  client, Client client2) {
@@ -122,19 +121,4 @@ public class Client {
         this.img = img;
     }
 
-    public String getReserve1() {
-        return reserve1;
-    }
-
-    public void setReserve1(String reserve1) {
-        this.reserve1 = reserve1;
-    }
-
-    public String getReserve2() {
-        return reserve2;
-    }
-
-    public void setReserve2(String reserve2) {
-        this.reserve2 = reserve2;
-    }
 }

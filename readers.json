@@ -1,18 +1,16 @@
 [
   {
-    "id": 1,
     "name": "Andrei",
-    "login": "Bazzzanga",
     "email": "qwe@qwe",
     "password": "122",
-    "reserve1": "Idiot"
+    "id": 1,
+    "login": "Bazzzanga"
   },
   {
-    "id": 2,
     "name": "Alexei",
-    "login": "Caramba",
-  "email": "ewq@ewq",
+    "email": "ewq@ewq",
     "password": "123",
-    "reserve2": "1984"
+    "id": 2,
+    "login": "Caramba"
   }
 ]

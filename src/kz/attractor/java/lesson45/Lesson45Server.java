@@ -38,46 +38,29 @@ public class Lesson45Server extends Lesson44Server {
         String raw = getBody(exchange);
         Map<String, String> parsed = Utils.parseUrlEncoded(raw, "&");
         try {
-            if (parsed.size() == 2) {
+            if (parsed.size() == Client.class.getDeclaredFields().length - 8) {
                 List<Client> clients = ReadersService.readFile();
-                for (Client client : clients) {
-                    if (client.getEmail().equals(parsed.get("email")) && client.getPassword().equals(parsed.get("password"))) {
-                        throw new RuntimeException();
+                Client client = Client.createClient(clients.size() + 1, parsed);
+
+                clients.add(client);
+                ReadersService.writeFile(clients);
+                redirect303(exchange, "/successfulRegistration");
+
+                for (Client clientCheck : clients) {
+                    if (Client.checkClientForExistence(client, clientCheck)) {
+                        throw new RuntimeException("user already exists!");
                     }
                 }
+            } else {
+                map.put("fail_text", "Please fill in all the fields!");
+                renderTemplate(exchange, "register.html", map);
             }
-            map.put("fail", true);
-            renderTemplate(exchange, "clientHistory.ftlh", map);
         } catch (Exception e) {
-            redirect303(exchange, "/profile");
-        }
+            e.printStackTrace();
 
-//        Map<String, Object> map = new HashMap<>();
-//        String raw = getBody(exchange);
-//        Map<String, String> parsed = Utils.parseUrlEncoded(raw, "&");
-//        try {
-//            if (parsed.size() == Client.class.getDeclaredFields().length - 1) {
-//                List<Client> clients = ReadersService.readFile();
-//                Client client = Client.createClient(clients.size() + 1, parsed);
-//
-//                for (Client clientCheck : clients) {
-//                    if (Client.checkClientForExistence(client, clientCheck)) {
-//                        throw new RuntimeException("user already exists!");
-//                    }
-//                }
-//                clients.add(client);
-//                ReadersService.writeFile(clients);
-//                redirect303(exchange, "/login");
-//            } else {
-//                map.put("fail_text", "Please fill in all the fields!");
-//                renderTemplate(exchange, "register.html", map);
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//
-//            map.put("fail_text", "Something went wrong");
-//            renderTemplate(exchange, "register.html", map);
-//        }
+            map.put("fail_text", "Something went wrong");
+            renderTemplate(exchange, "register.html", map);
+        }
     }
 
 
@@ -88,22 +71,19 @@ public class Lesson45Server extends Lesson44Server {
 
 
     private void loginPost(HttpExchange exchange) {
-//        String cType = getContentType(exchange);
-//        String raw = getBody(exchange);
-//
-//        Map<String, String> parsed = Utils.parseUrlEncoded(raw, "&");
-//
-//        String data = String.format("<p>Raw data: <b>%s</b></p>" +
-//                "<p>Content-type: <b>%s</b></p>" +
-//                "<p>After processing: <b>%s</b></p>", raw, cType, parsed);
-//        try{
-//            sendByteData(exchange, ResponseCodes.OK, ContentType.TEXT_HTML, data.getBytes());
-//        }catch (IOException e){
-//            e.printStackTrace();
-//        }
+        String cType = getContentType(exchange);
+        String raw = getBody(exchange);
 
+        Map<String, String> parsed = Utils.parseUrlEncoded(raw, "&");
 
-
+        String data = String.format("<p>Raw data: <b>%s</b></p>" +
+                "<p>Content-type: <b>%s</b></p>" +
+                "<p>After processing: <b>%s</b></p>", raw, cType, parsed);
+        try{
+            sendByteData(exchange, ResponseCodes.OK, ContentType.TEXT_HTML, data.getBytes());
+        }catch (IOException e){
+            e.printStackTrace();
+        }
 
 //        redirect303(exchange, "/client/clientHistory");
 

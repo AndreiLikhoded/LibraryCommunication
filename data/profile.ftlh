@@ -50,7 +50,6 @@
       </div>
     </nav>
             <h5 class="card-title">${profile.name}</h5>
-            <p class="card-text">${profile.login}</p>
             <p class="card-text">${profile.email}</p>
             <p class="card-text">${profile.password}</p>
           </div>
