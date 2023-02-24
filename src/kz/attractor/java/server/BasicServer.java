@@ -2,6 +2,7 @@ package kz.attractor.java.server;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
+import kz.attractor.java.lesson46.Cookie;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -193,6 +194,16 @@ public abstract class BasicServer {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    protected static String getCookies(HttpExchange exchange){
+        return exchange.getRequestHeaders()
+                .getOrDefault("Cookie", List.of(""))
+                .get(0);
+    }
+
+    protected void setCookie(HttpExchange exchange, Cookie cookie){
+        exchange.getResponseHeaders().add("Set-Cookie", cookie.toString());
     }
 
     private void handleIncomingServerRequests(HttpExchange exchange) {
