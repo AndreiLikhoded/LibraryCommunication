@@ -7,7 +7,7 @@ public class BookInfoModel {
 
     public BookInfoModel() {
         this.book = new Book("Idiot", "F.M.Dostoevskiy",
-                "https://klike.net/uploads/posts/2021-02/1613966494_1.jpg", "Andrei", "Alexei");
+                "https://klike.net/uploads/posts/2021-02/1613966494_1.jpg", "Andrei", "Alexei", "clientEmail");
     }
 
     public Book getBook() {

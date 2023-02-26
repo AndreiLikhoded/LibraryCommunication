@@ -7,15 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f773420-89a0-45eb-b583-baeec2116a30" name="Default Changelist" comment="second commit">
-      <change afterPath="$PROJECT_DIR$/data/bookError.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/newClient.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/libraryCommunication/Clients.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/libraryCommunication/BookOnHand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/libraryCommunication/BooksOnHand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/utils/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/ClientDataModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/ClientDataModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/books.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/data/books.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library.json" beforeDir="false" afterPath="$PROJECT_DIR$/library.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/BookInfoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/BookInfoModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kz/attractor/java/lesson46/Lesson46Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson46/Lesson46Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kz/attractor/java/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/attractor/java/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/freemarker.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kz/attractor/java/libraryCommunication/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/attractor/java/libraryCommunication/Book.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

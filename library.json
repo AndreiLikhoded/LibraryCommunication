@@ -4,27 +4,31 @@
     "name": "Idiot",
     "author": "F.M.Dostoevskiy",
     "busy": false,
-    "clientName1": "Andrei"
+    "clientName1": "Andrei",
+    "clientEmail": null
   },
   {
     "id": 2,
     "name": "Voina i mir",
     "author": "L.V.Tolstoy",
     "busy": false,
-    "clientName1": "Andrei"
+    "clientName1": "Andrei",
+    "clientEmail": null
   },
   {
     "id": 3,
     "name": "Brat`ya Karamazovy",
     "author": "F.M.Dostoevskiy",
     "busy": false,
-    "clientName2": "Alexei"
+    "clientName2": "Alexei",
+    "clientEmail": null
   },
   {
     "id": 4,
     "name": "1984",
     "author": "Jorj Oruel",
     "busy": false,
-    "clientName2": "Alexei"
+    "clientName2": "Alexei",
+    "clientEmail": null
   }
 ]

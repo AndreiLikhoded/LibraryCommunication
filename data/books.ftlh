@@ -72,6 +72,7 @@
             <td>${book.name}</td>
             <td>${book.author}</td>
             <td>${book.busy?string("Vacant", "Reserved")}</td>
+            <td>${book.clientEmail}</td>
             <td>${book.clientName1!}</td>
             <td>${book.clientName2!}</td>
             <td><a type="button" class="btn btn-info" href="/books/bookInfo">Info</button></td>
