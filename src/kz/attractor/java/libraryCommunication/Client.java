@@ -12,9 +12,10 @@ public class Client {
     private String email;
     private String password;
     private Integer id;
-
     private String login;
     private String img;
+
+    private String cookieId;
 
     private List<Integer> booksFor1;
     private List<Integer> booksFor2;
@@ -65,9 +66,6 @@ public class Client {
     }
 
     public static Client createClient(Integer id, Map<String, String> map) {
-
-
-
         return new Client(map.get("name"),map.get("email"), map.get("password"), id, map.get("bazzanga"), map.get("img"));
     }
 
@@ -121,4 +119,11 @@ public class Client {
         this.img = img;
     }
 
+    public String getCookieId() {
+        return cookieId;
+    }
+
+    public void setCookieId(String cookieId) {
+        this.cookieId = cookieId;
+    }
 }

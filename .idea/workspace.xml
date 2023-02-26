@@ -7,14 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f773420-89a0-45eb-b583-baeec2116a30" name="Default Changelist" comment="second commit">
-      <change afterPath="$PROJECT_DIR$/data/cookie.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson46/Cookie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson46/Lesson46Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/bookError.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/newClient.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kz/attractor/java/libraryCommunication/Clients.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/server/BasicServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/server/BasicServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kz/attractor/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/attractor/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kz/attractor/java/server/BasicServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/attractor/java/server/BasicServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AttractorHttpServer/kz/attractor/java/utils/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/ClientDataModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson44/ClientDataModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kz/attractor/java/lesson46/Lesson46Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/attractor/java/lesson46/Lesson46Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kz/attractor/java/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kz/attractor/java/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/freemarker.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +68,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
-    "last_opened_file_path": "C:/AttractorSchool/lesson44/data",
+    "last_opened_file_path": "C:/AttractorSchool/auction",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",

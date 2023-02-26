@@ -3,10 +3,13 @@ package kz.attractor.java.utils;
 import java.net.URLDecoder;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Utils {
@@ -32,4 +35,22 @@ public class Utils {
 
         return Optional.of(Map.entry(key, value));
     }
+
+    public String makeCode(String input){
+        try {
+            MessageDigest md = MessageDigest.getInstance("MDS");
+            return convertToString(md.digest(input.getBytes()));
+        }catch (NoSuchAlgorithmException e){
+            e.printStackTrace();
+        }
+        return "";
+    }
+    private String convertToString(byte[] array){
+        return IntStream.range(0, array.length / 4)
+                .map(i -> array[i])
+                .map(i -> (i < 0) ? i + 127 : i)
+                .mapToObj(Integer::toHexString)
+                .collect(Collectors.joining());
+    }
+
 }
