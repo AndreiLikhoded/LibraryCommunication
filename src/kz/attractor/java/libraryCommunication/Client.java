@@ -2,6 +2,7 @@ package kz.attractor.java.libraryCommunication;
 
 import kz.attractor.java.service.BooksService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -16,6 +17,8 @@ public class Client {
     private String img;
 
     private String cookieId;
+
+    private List<Integer> bookId = new ArrayList<>();
 
     private List<Integer> booksFor1;
     private List<Integer> booksFor2;
@@ -125,5 +128,13 @@ public class Client {
 
     public void setCookieId(String cookieId) {
         this.cookieId = cookieId;
+    }
+
+    public List<Integer> getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(List<Integer> bookId) {
+        this.bookId = bookId;
     }
 }

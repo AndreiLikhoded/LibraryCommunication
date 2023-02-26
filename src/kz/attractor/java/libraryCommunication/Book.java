@@ -2,6 +2,7 @@ package kz.attractor.java.libraryCommunication;
 
 import kz.attractor.java.service.ReadersService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Book {
@@ -21,6 +22,8 @@ public class Book {
     private String clientName2;
 
     private transient Client client;
+
+    private List<String> dataBook = new ArrayList<>();
 
 
     public Book(String name, String author, String img, String clientName1, String clientName2, String clientEmail) {
@@ -115,5 +118,13 @@ public class Book {
 
     public void setClientEmail(String clientEmail) {
         this.clientEmail = clientEmail;
+    }
+
+    public List<String> getDataBook() {
+        return dataBook;
+    }
+
+    public void setDataBook(List<String> dataBook) {
+        this.dataBook = dataBook;
     }
 }

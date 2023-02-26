@@ -5,19 +5,24 @@ import kz.attractor.java.lesson44.BookDataModel;
 import kz.attractor.java.lesson45.Lesson45Server;
 import kz.attractor.java.libraryCommunication.*;
 import kz.attractor.java.server.ContentType;
+import kz.attractor.java.service.BooksService;
 
 import java.io.IOException;
 import java.net.URLDecoder;
 import java.nio.file.Path;
 import java.text.CollationKey;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class Lesson46Server extends Lesson45Server {
 
     private final Clients clients = new Clients();
+
+    private Book book;
 
     private BookDataModel books = new BookDataModel();
 
@@ -79,10 +84,52 @@ public class Lesson46Server extends Lesson45Server {
 
             renderTemplate(exchange, "books.html", books);
         } else {
-            Path path = makeFilePath("loginError.html");
+            Path path = makeFilePath("bookError.html");
             sendFile(exchange, path, ContentType.TEXT_HTML);
         }
     }
+
+    public void ClientGetBook(HttpExchange exchange, Client client, Book book2) {
+        Client authorisedClient = clientIdentification(exchange);
+        if (authorisedClient != null) {
+            List<Book> book = BooksService.readFile();
+            for (Book books : book) {
+                if (book2.getBookId().equals(client.getId())) {
+                    this.book = books;
+                }
+            }
+            renderTemplate(exchange, "books.html", books);
+        } else {
+            Path path = makeFilePath("bookError.html");
+            sendFile(exchange, path, ContentType.TEXT_HTML);
+        }
+        if (authorisedClient != null && authorisedClient.getBookId().size() > 2) {
+            Path path = makeFilePath("bookError.html");
+            sendFile(exchange, path, ContentType.TEXT_HTML);
+        }
+        String params = exchange.getRequestURI().getQuery();
+        String id = params.split("=")[1];
+
+        client.setBooks();
+
+        String message = null;
+        if (book != null && book.getClientEmail() == null) {
+            assert authorisedClient != null;
+            book.setClientEmail(authorisedClient.getEmail());
+            book.getDataBook().add(authorisedClient.getEmail());
+
+            for (Client client1 : clients.getClients()) {
+                if (client1.getEmail().equals(authorisedClient.getEmail())) {
+                    client1.getBookId().add(book.getBookId());
+                    break;
+                }
+            }
+        } else {
+            message = "The book is reserved";
+        }
+        renderTemplate(exchange, "booksOnHand.html", new Information(message));
+    }
+
 
     private Client clientIdentification(HttpExchange exchange) {
 
