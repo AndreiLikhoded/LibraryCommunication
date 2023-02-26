@@ -24,7 +24,7 @@ public class Lesson46Server extends Lesson45Server {
     public Lesson46Server(String host, int port) throws IOException {
         super(host, port);
         registerGet("/lesson46", this::lesson46Handler);
-        registerGet("/books", this::booksHandler);
+        loginGet("/books", this::booksHandler);
     }
 
 
@@ -65,15 +65,15 @@ public class Lesson46Server extends Lesson45Server {
 
     private void booksHandler(HttpExchange exchange) {
 
-        Client athorisedClient = clientIdentification(exchange);
+        Client authorisedClient = clientIdentification(exchange);
 
-        if (athorisedClient != null) {
+        if (authorisedClient != null) {
 
             BooksOnHand books = new BooksOnHand();
 
             for (Book book : this.books.getBooks()) {
-                boolean isHandle = book.getClientEmail() != null && book.getClientEmail().equals(athorisedClient.getEmail());
-                BookOnHand bookOnHand = new BookOnHand(book.getName(),  book.getAuthor(), book.getImg(), book.getBookId(), book.getClientEmail(), isHandle);
+                boolean isHandle = book.getClientEmail() != null && book.getClientEmail().equals(authorisedClient.getEmail());
+                BookOnHand bookOnHand = new BookOnHand(book.getName(), book.getAuthor(), book.getImg(), book.getBookId(), book.getClientEmail(), isHandle);
                 books.getBooks().add(bookOnHand);
             }
 
@@ -121,5 +121,9 @@ public class Lesson46Server extends Lesson45Server {
         return result;
     }
 
-
+    private void logout(HttpExchange exchange) {
+        for (Client client : clients.getClients()) {
+            client.setCookieId(null);
+        }
+    }
 }

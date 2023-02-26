@@ -1,7 +1,6 @@
 package kz.attractor.java.lesson44;
 
 import com.sun.net.httpserver.HttpExchange;
-import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import freemarker.template.TemplateExceptionHandler;
@@ -9,7 +8,13 @@ import kz.attractor.java.server.BasicServer;
 import kz.attractor.java.server.ContentType;
 import kz.attractor.java.server.ResponseCodes;
 
-import java.io.*;
+import javax.security.auth.login.Configuration;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+
+
 
 public class Lesson44Server extends BasicServer {
     private final static Configuration freemarker = initFreeMarker();
