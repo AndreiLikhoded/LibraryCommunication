@@ -24,12 +24,17 @@ public class Lesson46Server extends Lesson45Server {
 
     private Book book;
 
+    private Book book2;
+
+    private Client client;
+
     private BookDataModel books = new BookDataModel();
 
     public Lesson46Server(String host, int port) throws IOException {
         super(host, port);
         registerGet("/lesson46", this::lesson46Handler);
-        loginGet("/books", this::booksHandler);
+        loginGet("/booksOnHand", this::clientGetBook);
+        loginGet("/returnBook", this::returnBook);
     }
 
 
@@ -67,7 +72,6 @@ public class Lesson46Server extends Lesson45Server {
         renderTemplate(exchange, "cookie.html", data);
 
     }
-
     private void booksHandler(HttpExchange exchange) {
 
         Client authorisedClient = clientIdentification(exchange);
@@ -89,7 +93,8 @@ public class Lesson46Server extends Lesson45Server {
         }
     }
 
-    public void ClientGetBook(HttpExchange exchange, Client client, Book book2) {
+    private void clientGetBook(HttpExchange exchange) {
+
         Client authorisedClient = clientIdentification(exchange);
         if (authorisedClient != null) {
             List<Book> book = BooksService.readFile();
@@ -129,6 +134,43 @@ public class Lesson46Server extends Lesson45Server {
         }
         renderTemplate(exchange, "booksOnHand.html", new Information(message));
     }
+
+    private void returnBook(HttpExchange exchange) {
+
+        Client authorisedClient = clientIdentification(exchange);
+
+        if (authorisedClient == null) {
+            Path path = makeFilePath("loginError.html");
+            sendFile(exchange, path, ContentType.TEXT_HTML);
+            return;
+        }
+        String params = exchange.getRequestURI().getQuery();
+
+        String bookId = params.split("=")[1];
+
+        Book book = null;
+
+        for (Book book1 : books.getBooks()) {
+            if (book1.getBookId() == Integer.parseInt(bookId)) {
+                book = book1;
+                book1.setClientEmail(null);
+                break;
+            }
+        }
+
+        for (Client client : clients.getClients()) {
+
+            if (client.getEmail().equals(authorisedClient.getEmail())) {
+                client.getBookId().remove((Object) Integer.parseInt(bookId));
+                break;
+            }
+        }
+
+        String message = "You return the book ";
+
+        renderTemplate(exchange, "returnBook.html", new Information(message));
+    }
+
 
 
     private Client clientIdentification(HttpExchange exchange) {
