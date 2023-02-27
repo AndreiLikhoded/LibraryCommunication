@@ -6,8 +6,6 @@ import kz.attractor.java.lesson44.ProfileDataModel;
 import kz.attractor.java.lesson44.SuccessfulRegistrationDataModel;
 import kz.attractor.java.libraryCommunication.Client;
 import kz.attractor.java.server.ContentType;
-import kz.attractor.java.server.ResponseCodes;
-import kz.attractor.java.service.BooksService;
 import kz.attractor.java.service.ReadersService;
 import kz.attractor.java.utils.Utils;
 

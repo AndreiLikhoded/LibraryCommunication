@@ -37,7 +37,6 @@ public class Lesson46Server extends Lesson45Server {
         loginGet("/returnBook", this::returnBook);
     }
 
-
     private void lesson46Handler(HttpExchange exchange) {
         Cookie sessionCookie = Cookie.make("userId", "123");
         exchange.getResponseHeaders().add("Set-Cookie", sessionCookie.toString());
@@ -72,27 +71,6 @@ public class Lesson46Server extends Lesson45Server {
         renderTemplate(exchange, "cookie.html", data);
 
     }
-    private void booksHandler(HttpExchange exchange) {
-
-        Client authorisedClient = clientIdentification(exchange);
-
-        if (authorisedClient != null) {
-
-            BooksOnHand books = new BooksOnHand();
-
-            for (Book book : this.books.getBooks()) {
-                boolean isHandle = book.getClientEmail() != null && book.getClientEmail().equals(authorisedClient.getEmail());
-                BookOnHand bookOnHand = new BookOnHand(book.getName(), book.getAuthor(), book.getImg(), book.getBookId(), book.getClientEmail(), isHandle);
-                books.getBooks().add(bookOnHand);
-            }
-
-            renderTemplate(exchange, "books.html", books);
-        } else {
-            Path path = makeFilePath("bookError.html");
-            sendFile(exchange, path, ContentType.TEXT_HTML);
-        }
-    }
-
     private void clientGetBook(HttpExchange exchange) {
 
         Client authorisedClient = clientIdentification(exchange);
