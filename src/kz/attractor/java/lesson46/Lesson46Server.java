@@ -35,6 +35,7 @@ public class Lesson46Server extends Lesson45Server {
         registerGet("/lesson46", this::lesson46Handler);
         loginGet("/booksOnHand", this::clientGetBook);
         loginGet("/returnBook", this::returnBook);
+        loginGet("/logout", this::logout);
     }
 
     private void lesson46Handler(HttpExchange exchange) {
