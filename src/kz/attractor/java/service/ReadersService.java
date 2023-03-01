@@ -37,4 +37,11 @@ public class ReadersService {
             e.printStackTrace();
         }
     }
+
+    public static int getNewEmployeeId(){
+        return ReadersService.readFile().stream()
+                .mapToInt(Client::getId)
+                .max().orElseThrow(RuntimeException::new) + 1;
+    }
+
 }

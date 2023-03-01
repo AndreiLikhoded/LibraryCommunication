@@ -1,7 +1,9 @@
 package kz.attractor.java.libraryCommunication;
 
+import kz.attractor.java.service.BooksService;
 import kz.attractor.java.service.ReadersService;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,44 +18,23 @@ public class Book {
 
     private Integer bookId;
 
-    private String clientEmail;
+   private String previousUser;
 
-    private String clientName1;
-    private String clientName2;
+   private String time;
+
+   private boolean onTheShelf;
 
     private transient Client client;
 
-    private List<String> dataBook = new ArrayList<>();
 
-
-    public Book(String name, String author, String img, String clientName1, String clientName2, String clientEmail) {
+    public Book(String bookName, String author, String category) {
+        this.bookId = BooksService.getNewBookId();
         this.name = name;
         this.author = author;
-        this.img = img;
-        this.clientName1 = clientName1;
-        this.clientName2 = clientName2;
-        this.clientEmail = clientEmail;
-
-        bookStatus();
-    }
-
-    public void bookStatus() {
-        if (busy) {
-            List<Client> client = ReadersService.readFile();
-            for (Client clients : client) {
-                if (clients.getId().equals(bookId)) {
-                    this.client = clients;
-                }
-            }
-        }
-    }
-
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
+        this.img = "";
+        this.previousUser = "";
+        setTime();
+        this.onTheShelf = true;
     }
 
     public String getName() {
@@ -72,6 +53,14 @@ public class Book {
         this.author = author;
     }
 
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
     public boolean isBusy() {
         return busy;
     }
@@ -88,6 +77,30 @@ public class Book {
         this.bookId = bookId;
     }
 
+    public String getPreviousUser() {
+        return previousUser;
+    }
+
+    public void setPreviousUser(String previousUser) {
+        this.previousUser = previousUser;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public boolean isOnTheShelf() {
+        return onTheShelf;
+    }
+
+    public void setOnTheShelf(boolean onTheShelf) {
+        this.onTheShelf = onTheShelf;
+    }
+
     public Client getClient() {
         return client;
     }
@@ -96,35 +109,10 @@ public class Book {
         this.client = client;
     }
 
-    public String getClientName1() {
-        return clientName1;
+    public void setTime() {
+        LocalDate time = LocalDate.now();
+        this.time = String.valueOf(time);
     }
 
-    public void setClientName1(String clientName1) {
-        this.clientName1 = clientName1;
-    }
 
-    public String getClientName2() {
-        return clientName2;
-    }
-
-    public void setClientName2(String clientName2) {
-        this.clientName2 = clientName2;
-    }
-
-    public String getClientEmail() {
-        return clientEmail;
-    }
-
-    public void setClientEmail(String clientEmail) {
-        this.clientEmail = clientEmail;
-    }
-
-    public List<String> getDataBook() {
-        return dataBook;
-    }
-
-    public void setDataBook(List<String> dataBook) {
-        this.dataBook = dataBook;
-    }
 }

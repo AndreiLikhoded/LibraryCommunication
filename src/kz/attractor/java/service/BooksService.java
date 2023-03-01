@@ -12,8 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BooksService {
-    private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
-
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static final Path PATH = Paths.get("./library.json");
 
@@ -37,5 +35,11 @@ public class BooksService {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static int getNewBookId(){
+        return BooksService.readFile().stream()
+                .mapToInt(Book::getBookId)
+                .max().orElseThrow(RuntimeException::new) + 1;
     }
 }

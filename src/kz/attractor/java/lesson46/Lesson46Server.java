@@ -1,7 +1,7 @@
 package kz.attractor.java.lesson46;
 
 import com.sun.net.httpserver.HttpExchange;
-import kz.attractor.java.lesson44.BookDataModel;
+import kz.attractor.java.libraryCommunication.BookDataModel;
 import kz.attractor.java.lesson45.Lesson45Server;
 import kz.attractor.java.libraryCommunication.*;
 import kz.attractor.java.server.ContentType;
@@ -10,11 +10,9 @@ import kz.attractor.java.service.BooksService;
 import java.io.IOException;
 import java.net.URLDecoder;
 import java.nio.file.Path;
-import java.text.CollationKey;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 

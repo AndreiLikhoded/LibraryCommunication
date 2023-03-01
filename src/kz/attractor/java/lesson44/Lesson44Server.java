@@ -5,6 +5,7 @@ import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import freemarker.template.TemplateExceptionHandler;
+import kz.attractor.java.libraryCommunication.BookDataModel;
 import kz.attractor.java.server.BasicServer;
 import kz.attractor.java.server.ContentType;
 import kz.attractor.java.server.ResponseCodes;
